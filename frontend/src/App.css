@@ -1,0 +1,84 @@
+/* -------------------------------------------
+ * GLOBAL RESET & BASE LAYOUT (STICKY FOOTER SETUP)
+ * ------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7; 
+    color: #333;
+    min-height: 100vh;      /* 1. Body takes full viewport height */
+    display: flex;          /* 2. Enables flex container */
+    flex-direction: column; /* 3. Stacks children (Header, Main, Footer) vertically */
+}
+
+/* Content area expands to push the footer down. */
+main {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.page-container-full {
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* Base container for content centering */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* General button styling */
+.button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    text-align: center;
+    display: inline-block;
+    border: none;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.section-title {
+    font-size: 1.75rem; 
+    font-weight: bold;
+    color: #1f2937; 
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #10b981; 
+}
+
+/* General input style used by all forms */
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; 
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2); 
+    outline: none;
+}
