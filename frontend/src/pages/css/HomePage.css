@@ -1,0 +1,250 @@
+/* ------------------------------------------
+ * HOMEPAGE BASE LAYOUT
+ * ------------------------------------------ */
+
+.homepage-container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Local Search Bar Style (Optional, if not using the one in Header) */
+.search-bar-local {
+    margin-bottom: 25px;
+}
+
+/* ------------------------------------------
+ * BANNER SECTION STYLES
+ * ------------------------------------------ */
+
+.banner-section {
+    display: flex;
+    flex-direction: column; /* Stacks the large banner and the row of small banners vertically */
+    gap: 15px; /* Spacing between the large banner and the small banners row */
+    margin-bottom: 40px;
+}
+
+.large-banner,
+.small-banner {
+    display: block; /* Ensures links take up the full image area */
+}
+
+.large-banner-image {
+    width: 100%;
+    height: auto; 
+    max-height: 300px; 
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.small-banners-row {
+    display: flex; /* Arranges the two small images horizontally */
+    gap:15px;
+    width: 101%;
+}
+
+.small-banner-image {
+    width: 95%; /* Makes each image take up its container's width */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0px 6px rgba(0, 0, 0, 0.08);
+}
+
+.small-banner {
+    flex: 1; /* Makes both small banners take equal width */
+}
+
+
+/* ------------------------------------------
+ * CATEGORY FILTER STYLES
+ * ------------------------------------------ */
+
+.filters-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows filters to wrap on smaller screens */
+    gap: 10px;
+    margin-bottom: 40px;
+    /* Optional: Add a light border/background to the container */
+    padding: 10px 0; 
+}
+
+.filter-button {
+    background-color: #f3f4f6; /* Light gray background */
+    color: #4b5563; /* Darker gray text */
+    padding: 10px 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    white-space: nowrap; /* Prevents text wrap on small buttons */
+}
+
+.filter-button:hover {
+    background-color: #e5e7eb;
+}
+
+.filter-button.active {
+    background-color: #10b981; /* Blinkit Green */
+    color: white;
+    border-color: #059669;
+}
+
+/* ------------------------------------------
+ * PRODUCT GRID STYLES
+ * ------------------------------------------ */
+
+.product-grid {
+    display: grid;
+    /* Responsive Grid: At least 200px wide columns, auto-fill the row */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 5px 10px 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ef4444; /* Red accent for price */
+    margin: 5px 10px 10px;
+}
+
+.product-category {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+.add-to-cart-button {
+    background-color: #10b981; /* Blinkit Green */
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #059669;
+}
+
+.no-products-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6b7280;
+    padding: 50px 0;
+}
+
+
+/* ------------------------------------------
+ * RESPONSIVENESS
+ * ------------------------------------------ */
+
+@media (max-width: 768px) {
+    .product-grid {
+        /* Adjust for smaller screens: minimum 150px wide columns */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+        gap: 15px;
+    }
+
+    .homepage-container {
+        padding-top: 10px;
+    }
+
+    .banner-section {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .small-banners-row {
+        gap: 10px;
+    }
+    
+    .large-banner-image {
+        max-height: 180px;
+    }
+
+    .small-banner-image {
+        height: 100px;
+    }
+
+    .filter-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    
+    .product-name {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr; /* Force 2 columns on very small screens */
+    }
+
+    .filter-button {
+        /* Allow buttons to take more space on small screens */
+        flex-grow: 1; 
+        text-align: center;
+    }
+
+    .small-banners-row {
+        flex-direction: column; /* Stack small banners vertically */
+    }
+    
+    .small-banner, .small-banner-image {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}

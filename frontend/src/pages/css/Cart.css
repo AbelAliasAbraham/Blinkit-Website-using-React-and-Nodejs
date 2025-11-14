@@ -1,0 +1,79 @@
+/* -------------------------------------------
+ * Cart Styles 
+ * ------------------------------------------- */
+
+.cart-container {
+    padding: 33px 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    border-left: 4px solid #10b981; 
+}
+
+.cart-item-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.cart-item-price {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.remove-button {
+    background-color: #fef2f2; 
+    color: #ef4444; 
+    border: 1px solid #fecaca;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.remove-button:hover {
+    background-color: #fee2e2;
+}
+
+.cart-summary {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.cart-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #1f2937;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.cart-container .input-field {
+    margin-bottom: 20px;
+}
+
+.cart-container .checkout-button {
+    width: 150%;
+    background-color: #10b981;
+    color: white;
+}
+
+.cart-container .checkout-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}   

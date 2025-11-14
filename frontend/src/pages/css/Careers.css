@@ -1,0 +1,182 @@
+/* ------------------------------------------
+ * CAREERS PAGE STYLES
+ * ------------------------------------------ */
+
+.careers-container {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.careers-tagline {
+    text-align: center;
+    color: #4b5563;
+    font-size: 1.25rem;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.careers-section {
+    padding: 30px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.careers-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #10b981; /* Blinkit Green */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- Culture Section Styles --- */
+.culture-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.culture-card {
+    background-color: #f0fff4; /* Light mint/green background */
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #b2f5d0;
+    text-align: center;
+}
+
+.culture-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.culture-card p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* --- Openings Section Styles --- */
+.openings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.job-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.job-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.job-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 15px;
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.job-type {
+    font-weight: 500;
+    color: #f59e0b; /* Orange accent */
+}
+
+.apply-button {
+    /* Standard button class should be defined globally or in another CSS */
+    background-color: #3b82f6; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.apply-button:hover {
+    background-color: #2563eb;
+}
+
+/* --- CTA Section Styles --- */
+.cta-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.cta-button {
+    /* Uses the standard button style */
+    display: inline-block;
+    background-color: #10b981; /* Blinkit Green */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #059263;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .job-meta {
+        flex-direction: row;
+        gap: 15px;
+        margin-right: 0;
+    }
+    .apply-button {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,20 @@
+/* -------------------------------------------
+ * Order Tracking Styles 
+ * ------------------------------------------- */
+
+.tracking-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.tracking-status {
+    font-size: 1.25rem; /* text-lg */
+    margin-top: 15px;
+    font-weight: 500;
+    color: #1f2937;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #10b981; 
+}

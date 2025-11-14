@@ -1,0 +1,154 @@
+/* ADMIN DASHBOARD STYLES */
+
+.admin-container {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+.admin-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+/* Form Layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for inputs */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.full-width {
+    grid-column: 1 / -1; /* Make an element span both columns */
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.textarea-field {
+    resize: vertical;
+}
+
+.select-field {
+    /* Ensure select styling is consistent */
+    appearance: none; 
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%2000-13.2-6.2H18.6c-5.2%200-9.6%202-13.2%206.2-7.2%207.2-7.2%2018.8%200%2026.1l128%20128c3.6%203.6%208%205.4%2012.6%205.4s9.2-1.8%2012.8-5.4l128-128c7.4-7.2%207.4-18.8%200-26.1z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* FAQ Styling */
+.sub-section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    padding: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f9f9f9;
+}
+
+.remove-faq-button {
+    background-color: #ef4444; /* Red */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 150px;
+    align-self: flex-start;
+    font-size: 0.9rem;
+}
+
+.add-faq-button {
+    background-color: #10b981;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+
+/* Utility classes from App.css */
+.button {
+    padding: 12px 20px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.button:hover:not(:disabled) {
+    background-color: #059669;
+}
+
+.button:disabled {
+    background-color: #a1a1aa;
+    cursor: not-allowed;
+}
+
+.mt-5 { margin-top: 1.25rem; }
+.mt-8 { margin-top: 2rem; }
+.full-width { width: 100%; }
+.bg-gray-500 { background-color: #6b7280; }
+.hover\:bg-gray-600:hover { background-color: #4b5563; }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .admin-card {
+        padding: 20px;
+    }
+}

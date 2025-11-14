@@ -1,0 +1,168 @@
+/* ------------------------------------------
+ * FOOTER STYLES
+ * File: src/css/Footer.css
+ * ------------------------------------------ */
+
+/* --- 1. Base Styles --- */
+.footer-main {
+    background-color: #1f2937; /* Dark background */
+    color: #e5e7eb; /* Light text */
+    padding-top: 0; 
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-top: 4px solid #10b981; /* Green line at the top */
+}
+
+.footer-main h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-text {
+    margin-bottom: 10px;
+    color: #bdbdbd;
+}
+
+/* --- 2. Newsletter/CTA Section --- */
+.footer-newsletter-section {
+    background-color: #10b981; /* Blinkit Green */
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.footer-newsletter-section h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 10px auto 0;
+}
+
+.newsletter-input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.newsletter-button {
+    background-color: #f59e0b; /* Yellow/Orange accent */
+    color: #1f2937;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.newsletter-button:hover {
+    background-color: #d97706;
+}
+
+
+/* --- 3. Main Grid Layout --- */
+.footer-grid-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    /* 4 columns on large screens, responsive on small screens */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 30px;
+}
+
+/* --- 4. Links and Socials --- */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-link {
+    color: #bdbdbd;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #10b981; /* Blinkit Green on hover */
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-social-icon {
+    font-size: 1.5rem;
+    color: #bdbdbd;
+    transition: color 0.2s;
+}
+
+.footer-socials a:hover .footer-social-icon {
+    color: #10b981;
+}
+
+/* --- 5. Bottom Bar --- */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    background-color: #111827; /* Even darker background for the bottom bar */
+}
+
+.footer-copyright {
+    text-align: center;
+    margin: 0;
+    color: #9ca3af;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets/small devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* 1 column on extra small phones */
+    }
+
+    .footer-newsletter-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 15px;
+    }
+
+    .newsletter-input, .newsletter-button {
+        width: 100%;
+        border-radius: 6px; /* Full radius on mobile */
+    }
+
+    .newsletter-button {
+        margin-left: 0;
+    }
+}

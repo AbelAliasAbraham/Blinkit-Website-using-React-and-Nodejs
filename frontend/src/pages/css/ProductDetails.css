@@ -1,0 +1,155 @@
+/* -------------------------------------------
+ * Product Details Styles 
+ * ------------------------------------------- */
+
+.details-container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.details-wrapper {
+    /* 🔑 KEY: This creates the left/right layout for image (left) and core info (right) */
+    display: flex;
+    gap: 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.details-image-container {
+    flex: 1; /* Takes up one part of the space (e.g., the left side) */
+    max-width: 400px;
+    text-align: center;
+}
+
+.details-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.details-info {
+    flex: 2; /* Takes up two parts of the space (e.g., the right side) */
+}
+
+.details-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.details-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ef4444; /* Red color for price */
+    margin-bottom: 20px;
+}
+
+.details-info .button {
+    background-color: #ef4444; /* Red button */
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+}
+
+.details-info .button:hover {
+    background-color: #dc2626;
+}
+
+
+/* -------------------------------------------
+ * Product Specifications/Content Styles
+ * ------------------------------------------- */
+
+.details-content-container {
+    margin-top: 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.detail-section {
+    margin-bottom: 30px;
+}
+
+.detail-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #10b981; /* Blinkit Green */
+    margin-bottom: 10px;
+}
+
+.detail-section p, .detail-section li {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.detail-section ul {
+    list-style: square;
+    padding-left: 25px;
+    margin-top: 5px;
+}
+
+/* FAQ Styles */
+.faq-question {
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.faq-answer {
+    color: #6b7280;
+    margin-bottom: 15px;
+    border-left: 3px solid #10b981;
+    padding-left: 10px;
+}
+
+
+/* Responsive adjustments: Stack elements vertically on smaller screens */
+@media (max-width: 992px) {
+    .details-wrapper {
+        flex-direction: column; 
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .details-image-container {
+        max-width: 100%;
+    }
+
+    .details-title {
+        font-size: 2rem;
+    }
+
+    .details-price {
+        font-size: 1.5rem;
+    }
+
+    .details-content-container {
+        padding: 20px;
+    }
+}
+
+/* Utility Class used in ProductDetails.jsx */
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 15px;
+}
