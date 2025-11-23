@@ -107,7 +107,7 @@ You will need **Node.js**, **npm**, and a running **MongoDB instance** (local or
 
 1.  **Navigate** to the server directory:
     ```bash
-    cd server
+    cd backend
     ```
 2.  **Install Dependencies:**
     ```bash
@@ -142,14 +142,14 @@ You will need **Node.js**, **npm**, and a running **MongoDB instance** (local or
 
 1.  **Navigate** to the client directory:
     ```bash
-    cd client
+    cd frontend
     ```
 2.  **Install Dependencies:**
     ```bash
     npm install
     ```
 3.  **Configure Environment:**
-    Ensure your client `.env` file (e.g., `client/.env`) is configured correctly to point to the backend:
+    Ensure your client `.env` file (e.g., `frontend/.env`) is configured correctly to point to the backend:
 
     ```bash
     VITE_APP_API_URL=http://localhost:5000
